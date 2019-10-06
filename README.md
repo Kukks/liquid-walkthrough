@@ -2,18 +2,18 @@
 
 ## Exercise 1: Configuring and Running Liquid
 
-1. Download and Install Elements, as appropriate for your Operating System https://github.com/ElementsProject/elements/releases/tag/elements-0.17.0
+1. Download and Install Elements, as appropriate for your Operating System https://github.com/ElementsProject/elements/releases/tag/elements-0.18.1.1
 
     - Linux: Download, Unzip the file contents, Copy the executables from the archive’s /bin/ directory into /usr/local/bin/
     - macOS: dmg installer will open a “Elements-Core” in your Finder sidebar. Drag “Elements Core” executable into Applications Folder. 
     - Windows: Installs to C:\Program Files\Bitcoin - Executables start with elements instead of liquid. 
 
-1. Setup Liquid config file. Create liquid.conf (if not already present) in directory:
-    - Linux: $HOME/.liquid/
-    - macOS: $HOME/Library/Application Support/Liquid/
-    - Windows: %APPDATA%\Liquid\
+1. Setup Liquid config file. Create elements.conf (if not already present) in directory:
+    - Linux: $HOME/.elements/
+    - macOS: $HOME/Library/Application Support/elements/
+    - Windows: %APPDATA%\elements\
 
-1. Add the following lines to liquid.conf:
+1. Add the following lines to elements.conf:
 
     ```ini
     chain=elementsregtest
@@ -124,7 +124,7 @@
 
 1. Stop Elements Core by closing the Debug Window and then quitting the application.
 
-1. Add the following lines to the liquid.conf file created previously:
+1. Add the following lines to the elements.conf file created previously:
 
     ```ini
     assetdir=<YOUR ASSET HEX>:demoasset
@@ -217,7 +217,7 @@
 
     This multisig address is our 2 of 2 redeem script for signing blocks.
 
-1. Add the following lines to the liquid.conf file created previously:
+1. Add the following lines to the elements.conf file created previously:
 
     ```ini
     signblockscript=<YOUR REDEEMSCRIPT>
@@ -335,7 +335,7 @@
 
 1. Start Bitcoin Core (bitcoin-qt), as applicable for your OS. Navigate to the Debug Window.
 
-1. Add the following lines to the liquid.conf file created previously:
+1. Add the following lines to the elements.conf file created previously:
 
     ```ini
     mainchainrpcport=18888
@@ -345,7 +345,7 @@
     mainchainrpcpassword=password3
     ```
 
-1. UPDATE the liquid.conf file to validate peg-ins:
+1. UPDATE the elements.conf file to validate peg-ins:
 
     ```ini
     validatepegin=1
